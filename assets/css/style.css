@@ -19,6 +19,13 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+
+}
 
 /* Header */
 header {
@@ -36,14 +43,6 @@ header {
 header a {
     text-decoration: none;
     color: inherit;
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-
 }
 
 #menu {
@@ -89,16 +88,77 @@ nav {
 
 /* Main Content */
 main {
-    background-color: lightblue;
 
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
+/* Hero Section */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text > h2,
+#cover-text > h3 {
+    color: #ffffff;
+}
+
+#cover-text {
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+/* Content styling */
+
+#benefits p {
+    padding: 0 20px;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin-top: 5px;
+    margin: 5px 0;
+}
+
+#reasons h2 {
+    font-size: 280%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.benefits-mental > div .benefits-physical > div {
+    line-height: 20px;
+    margin-ottom: 20px;
+}
+
+#reasons {
+    margin: 20px auto;
+    width: 90%
+    
+}
+
+#benefits {
+   
+}
+
 /* Footer */
 #social-networks {
-    text-align:center;
+    text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
@@ -106,8 +166,8 @@ main {
 }
 
 #social-networks i {
-    font-size: 160%
-    padding: 5%
+    font-size: 160%;
+    padding: 5%;
     color: #3a3a3a;
 }
 
@@ -128,7 +188,7 @@ main {
         display: flex;
     }
 
-    #menu>li {
+    #menu > li {
         padding-left: 1rem;
     }
 
@@ -142,19 +202,30 @@ main {
         margin: 0 0.5rem;
     }
 
+
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
-    /* Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-    #menu a:hover{
-        border-bottom: 1px solid #3a3a3a;
+    /* Hero image */
+    #cover-text {
+        width: 300px;
+        right: 50px;
     }
 
-{
+    #hero {
+    height: 800px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
 
 }
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
 
