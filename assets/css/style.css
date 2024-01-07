@@ -240,7 +240,7 @@ main {
         border-radius: 2px;
     }
 
-    #radio-buttons {
+    .radio-buttons {
         display: flex;
         justify-content: space-between;
         width: 100%;
