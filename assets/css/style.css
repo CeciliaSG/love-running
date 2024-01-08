@@ -238,6 +238,7 @@ main {
         color:#fafafa;
         border: 1px solid #fafafa;
         border-radius: 2px;
+        width: 100%;
     }
 
     .radio-buttons {
@@ -347,14 +348,14 @@ main {
 /* Sign-up form larger screens */
 
 #signup {
-    background-position: ;
-    position: absolute;
+    background-position: center;
+    position: ;
 }
 
 #signup-form {
     position: absolute;
-    margin-top: 150px;
-    scroll-margin-left: 10%;
+    top: 150px;
+    left: 10%;
     max-width: 400px;
 }
 
