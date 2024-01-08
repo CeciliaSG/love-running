@@ -13,7 +13,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
     /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
@@ -91,14 +90,14 @@ nav {
 
 /* Main content */
 main {
-        /* Enlarge main element to push footer down*/
-        flex: 1 0 auto;
-        /* Add margin at the top to prevent content from being covered by the header */
-        margin-top: 47px;
-        /* Enable flex properties for child elements */
-        display: flex;
-        flex-direction: column;
-    }
+    /* Enlarge main element to push footer down*/
+    flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
+    margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
+}
 
 /* Hero section */
 #hero {
@@ -186,7 +185,7 @@ main {
     Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Creates a grid of meetup time divs over the background image */
+    /* Creates a grid of meetup time dives over the background image */
     border: 2px solid white;
 }
 
@@ -194,11 +193,6 @@ main {
     /* Override the heading colour set in general styles */
     color: #fafafa;
 }
-
-#times h3 {
-    color: #fafafa;
-}
-
 
 /* Gallery page */
 #photos img {
@@ -210,53 +204,56 @@ main {
     line-height: 0;
 }
 
-/* Sign-up page */
-    #signup {
-            background-image: url("../images/signup-image.webp");
-            background-size: cover;
-            background-position: 75%;
-            padding: 20px 10% 0 10%;
-            flex-grow: 1;
-        }
-#signup-form > h2 {
-    color: #fafafa;
-    margin-bottom: 20px;
+/* Form */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
 }
+
 
 #signup-form {
     color: #ffffff;
     background-color: rgba(60, 60, 60, 0.6);
     padding: 30px;
-    }
+}
 
-    .text-input {
-        background: transparent;
-        height: 25px;
-        padding: 0 5px;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        color:#fafafa;
-        border: 1px solid #fafafa;
-        border-radius: 2px;
-        width: 100%;
-    }
 
-    .radio-buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
 
-    .join-button {
-        border-radius: 2px;
-        background-color: #454b1b;
-        color:#fafafa;
-        font-size: 100%;
-        padding: 15px 32px;
-        margin-top: 20px;
 
-    }
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
 
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
+}
 
 /* Footer */
 #social-networks {
@@ -275,11 +272,10 @@ main {
 
 /* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
-
-#photos {
-    column-count: 2;
-    column-gap: 0;
-}
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -341,74 +337,72 @@ main {
         text-align: end;
         align-self: flex-end;
     }
-#photos {
-    column-count: 3;
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
+
+    /* Form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
 }
-
-/* Sign-up form larger screens */
-
-#signup {
-    background-position: center;
-}
-
-#signup-form {
-    position: absolute;
-    top: 150px;
-    left: 10%;
-    max-width: 400px;
-}
-
-#text-input:hover {
-    border-color: #f16c6b;
-}
-
-.join-button:hover {
-
-    background-color: #fafafa;
-    color: #454b1b;
-
-}
-
-}
-
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+
     /* Gallery */
     #photos {
         column-count: 4;
     }
 }
 
- /* Larger devices (desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
 
-                #benefits {
-                    display: flex;
-                    flex-direction: row;
-                }
-
-                #benefits > div {
-                    flex: 1;
-                }
-
-                #benefits-image {
-                    order: 0;
-                }
-
-                #benefits-mental {
-                    order: 1;
-                }
-
-                #benefits-mental > div {
-                    align-self: flex-start;
-                }
-
-                #benefits-physical {
-                    align-self: flex-end;
-                }
-
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
     }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical>div {
+        align-self: flex-end;
+    }
+}
